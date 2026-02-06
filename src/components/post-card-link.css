@@ -1,0 +1,8 @@
+.post-user-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-user-link:hover {
+    text-decoration: underline;
+}

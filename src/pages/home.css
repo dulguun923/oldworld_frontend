@@ -1,0 +1,149 @@
+/* =========================
+   HOME SCREEN – OLDWORLD
+   ========================= */
+
+.home-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #f8fafc,
+            #eef2f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Main card */
+.home-card {
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left side */
+.home-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+}
+
+.home-title span {
+    color: #0ea5a4;
+    /* logo color accent */
+}
+
+.home-subtitle {
+    font-size: 18px;
+    color: #475569;
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.home-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.home-btn {
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Primary */
+.home-btn.primary {
+    background: linear-gradient(135deg, #0ea5a4, #14b8a6);
+    color: white;
+    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.35);
+}
+
+.home-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(20, 184, 166, 0.45);
+}
+
+/* Secondary */
+.home-btn.secondary {
+    background: transparent;
+    border: 2px solid #0ea5a4;
+    color: #0ea5a4;
+}
+
+.home-btn.secondary:hover {
+    background: #0ea5a4;
+    color: white;
+}
+
+/* Right side (logo glass card) */
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-glass {
+    width: 320px;
+    height: 320px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.logo-glass img {
+    width: 140px;
+    height: auto;
+}
+
+/* Footer text */
+.home-footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+    .home-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .home-left {
+        align-items: center;
+    }
+
+    .home-subtitle {
+        max-width: 100%;
+    }
+
+    .home-actions {
+        justify-content: center;
+    }
+}

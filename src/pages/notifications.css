@@ -1,0 +1,116 @@
+.notifications-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notifications-header h2 {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.mark-read-btn {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.mark-read-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: background 0.2s;
+}
+
+.notification-item.unread {
+    background: var(--bg-hover);
+    border-left: 4px solid var(--accent-color);
+}
+
+.notif-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notif-content {
+    flex: 1;
+}
+
+.notif-text {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.notif-text strong {
+    font-weight: 600;
+}
+
+.notif-time {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.notif-icon-type {
+    position: absolute;
+    bottom: 12px;
+    left: 48px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+.type-like {
+    background: #e91e63;
+}
+
+.type-comment {
+    background: #2196f3;
+}
+
+.type-follow {
+    background: #4caf50;
+}
+
+.empty-notifs {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+}
